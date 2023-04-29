@@ -1,0 +1,30 @@
+<h4>Flopchooser</h4>
+
+<div style="margin-bottom:2rem" >
+  <p>Which movie has a lower IMDB rating?</p>
+  <p>Correct or Incorrect Message Here! (how can you show or hide an element?</p>
+  <button class="btn btn-primary" (click)="playAgain()">Play Again</button>
+  <span [hidden] = "!chosen">
+   {{message}}
+  </span>
+  
+</div>
+  
+ 
+
+<div style="display:flex; justify-content:space-around">
+  
+  <div style="cursor:pointer;">
+    <img [src]="flops[0].imageUrl" style="width:8rem; height:auto" alt=""
+      (click)="choice(flops[0])"
+    >
+
+  </div>
+  
+  <div style="cursor:pointer">
+    <img [src]="flops[1].imageUrl" style="width:8rem; height:auto" alt=""
+    (click)="choice(flops[1])"
+    >
+  </div>
+
+</div>
